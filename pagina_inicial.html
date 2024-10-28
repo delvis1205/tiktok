@@ -1,0 +1,252 @@
+<html><head><base href="/" /><base href="/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Clone</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #2f2f2f;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo svg {
+    width: 118px;
+    height: 42px;
+    fill: #fff;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-links li:hover {
+    background-color: #2f2f2f;
+    border-radius: 4px;
+}
+
+.nav-links li i {
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.video-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.video-info {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    z-index: 2;
+}
+
+.video-info h3 {
+    margin-bottom: 10px;
+}
+
+.video-info p {
+    margin-bottom: 20px;
+}
+
+.actions {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.action-button i {
+    font-size: 28px;
+}
+
+.action-button span {
+    font-size: 12px;
+}
+
+.tiktok-embed {
+    width: 100%;
+    height: 100%;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <path d="M250 0C111.928 0 0 111.928 0 250c0 138.072 111.928 250 250 250s250-111.928 250-250C500 111.928 388.072 0 250 0zm113.516 189.516c-.796.188-1.592.376-2.388.564-24.824 5.744-47.264 2.384-65.824-7.752-20.904-11.392-35.152-29.944-42.904-51.944v124.96c0 54.296-44.096 98.392-98.392 98.392-54.296 0-98.392-44.096-98.392-98.392 0-54.296 44.096-98.392 98.392-98.392 3.464 0 6.876.188 10.248.532v49.944c-3.368-.564-6.784-.876-10.248-.876-26.952 0-48.824 21.872-48.824 48.824s21.872 48.824 48.824 48.824 48.824-21.872 48.824-48.824V0h47.264c.876 39.78 29.944 73.012 69.724 78.756v47.264c47.452-6.784 82.416 9.372 97.416 26.764l-3.368 36.732h-.352z"/>
+                </svg>
+            </div>
+            <ul class="nav-links">
+                <li><i class="fas fa-home"></i>Para Você</li>
+                <li><i class="fas fa-users"></i>Seguindo</li>
+                <li><i class="fas fa-compass"></i>Descobrir</li>
+                <li><i class="fas fa-video"></i>LIVE</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <!-- TikTok Embed 1 -->
+            <div class="video-container">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@khaby.lame/video/6996763548731426053" data-video-id="6996763548731426053">
+                    <section></section>
+                </blockquote>
+                <div class="video-info">
+                    <h3>@usuario</h3>
+                    <p>Descrição do vídeo #viral #tiktok</p>
+                </div>
+                <div class="actions">
+                    <button class="action-button">
+                        <i class="fas fa-heart"></i>
+                        <span>123.4K</span>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-comment"></i>
+                        <span>1.2K</span>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-bookmark"></i>
+                        <span>5.6K</span>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- TikTok Embed 2 -->
+            <div class="video-container">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@charlidamelio/video/6996763548731426053" data-video-id="6996763548731426053">
+                    <section></section>
+                </blockquote>
+                <div class="video-info">
+                    <h3>@usuario2</h3>
+                    <p>Outro vídeo incrível #dance #trend</p>
+                </div>
+                <div class="actions">
+                    <button class="action-button">
+                        <i class="fas fa-heart"></i>
+                        <span>256.8K</span>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-comment"></i>
+                        <span>3.4K</span>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-bookmark"></i>
+                        <span>8.9K</span>
+                    </button>
+                    <button class="action-button">
+                        <i class="fas fa-share"></i>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script async src="https://www.tiktok.com/embed.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mainContent = document.querySelector('.main-content');
+    let isScrolling;
+
+    mainContent.addEventListener('scroll', function() {
+        window.clearTimeout(isScrolling);
+        
+        isScrolling = setTimeout(function() {
+            const videoContainers = document.querySelectorAll('.video-container');
+            const scrollPosition = mainContent.scrollTop;
+            const windowHeight = window.innerHeight;
+
+            videoContainers.forEach((container) => {
+                const containerTop = container.offsetTop;
+                const containerHeight = container.offsetHeight;
+
+                if (scrollPosition >= containerTop - windowHeight/2 && 
+                    scrollPosition < containerTop + containerHeight - windowHeight/2) {
+                    // Aqui você pode adicionar lógica para pausar/reproduzir vídeos
+                    console.log('Video in view:', container);
+                }
+            });
+        }, 66);
+    });
+
+    // Adiciona funcionalidade aos botões de ação
+    const actionButtons = document.querySelectorAll('.action-button');
+    actionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            const count = this.querySelector('span');
+            
+            if (icon.classList.contains('fas')) {
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                let currentCount = parseInt(count.textContent);
+                count.textContent = (currentCount - 1).toString() + 'K';
+            } else {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                let currentCount = parseInt(count.textContent);
+                count.textContent = (currentCount + 1).toString() + 'K';
+            }
+        });
+    });
+});
+</script>
+</body></html>
